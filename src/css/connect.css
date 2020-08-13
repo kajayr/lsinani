@@ -1,0 +1,80 @@
+.openConnect {
+  display: grid;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  justify-self: center;
+  align-self: center;
+  background-color: rgba(242, 242, 255, 0.432);
+  border-radius: 10px;
+  z-index: 4;
+  width: 25%;
+  animation: connect 2s forwards;
+}
+
+@keyframes connect {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.closeConnect {
+  display: grid;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  justify-self: center;
+  align-self: center;
+  opacity: 1;
+  background-color: rgba(242, 242, 255, 0.432);
+  width: 25%;
+  border-radius: 10px;
+  animation: close3 2s forwards;
+}
+@keyframes close3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0);
+    display: none;
+  }
+}
+.connectHeader {
+  justify-self: center;
+  padding-top: 0.5rem;
+  color: white;
+  text-shadow: 2px 2px 8px black;
+  font-family: "Merienda One", cursive;
+  font-size: 2rem;
+}
+.connectText {
+  font-size: 1.2rem;
+  text-align: justify;
+  justify-self: center;
+}
+
+.linkedIn {
+  padding-top: 1rem;
+  justify-self: center;
+}
+.gitHub {
+  padding-top: 1rem;
+  justify-self: center;
+}
+
+@media all and (max-width: 500px) {
+  .openConnect {
+    grid-column: 1;
+    grid-row: 2;
+    width: 80%;
+  }
+  .closeConnect {
+    width: 80%;
+    grid-column: 1;
+    grid-row: 2;
+  }
+}

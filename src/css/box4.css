@@ -1,0 +1,86 @@
+.content4 {
+  position: relative;
+  max-width: 100%;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.exBox4 {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+  color: black;
+}
+.content4:hover {
+  transform: scale(0.9);
+}
+.content4::before,
+.content4::after {
+  content: "";
+  z-index: 1;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0rem;
+  box-shadow: 0.2px 2px 8px 3px white;
+  background: rgba(255, 255, 255, 0.2);
+  margin-top: 0.5rem;
+}
+
+.content4::before {
+  left: 0;
+  border-bottom: 3px solid white;
+  border-left: 3px solid white;
+  animation: leftLine4 1s ease 0.2s forwards, bottomLine4 1s ease 1.2s forwards;
+}
+
+@keyframes leftLine4 {
+  0% {
+  }
+  100% {
+    height: 5rem;
+  }
+}
+@keyframes bottomLine4 {
+  0% {
+  }
+  100% {
+    width: 99%;
+  }
+}
+.content4::after {
+  right: 0;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+  animation: rightLine4 1s ease 0.2s forwards, topLine4 1s ease 1.2s forwards;
+}
+@keyframes rightLine4 {
+  0% {
+  }
+  100% {
+    height: 5rem;
+  }
+}
+@keyframes topLine4 {
+  0% {
+  }
+  100% {
+    width: 99%;
+  }
+}
+
+.contentFade4 {
+  opacity: 1;
+  animation: contentFade4 2s forwards;
+}
+@keyframes contentFade4 {
+  50% {
+    opacity: 0.5;
+    transform: scale(0.1);
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}

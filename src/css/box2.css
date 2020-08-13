@@ -1,0 +1,86 @@
+.content2 {
+  position: relative;
+  max-width: 100%;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.ProjectsBox2 {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+  color: black;
+}
+.content2:hover {
+  transform: scale(0.9);
+}
+.content2::before,
+.content2::after {
+  content: "";
+  z-index: 1;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0rem;
+  box-shadow: 0.2px 2px 8px 3px white;
+  background: rgba(255, 255, 255, 0.2);
+  margin-top: 0.5rem;
+}
+
+.content2::before {
+  left: 0;
+  border-bottom: 3px solid white;
+  border-left: 3px solid white;
+  animation: leftLine2 1s ease 0.2s forwards, bottomLine2 1s ease 1.2s forwards;
+}
+
+@keyframes leftLine2 {
+  0% {
+  }
+  100% {
+    height: 5rem;
+  }
+}
+@keyframes bottomLine2 {
+  0% {
+  }
+  100% {
+    width: 99%;
+  }
+}
+.content2::after {
+  right: 0;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+  animation: rightLine2 1s ease 0.2s forwards, topLine2 1s ease 1.2s forwards;
+}
+@keyframes rightLine2 {
+  0% {
+  }
+  100% {
+    height: 5rem;
+  }
+}
+@keyframes topLine2 {
+  0% {
+  }
+  100% {
+    width: 99%;
+  }
+}
+
+.contentFade2 {
+  opacity: 1;
+  animation: contentFade2 2s forwards;
+}
+@keyframes contentFade2 {
+  50% {
+    opacity: 0.5;
+    transform: scale(0.1);
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}

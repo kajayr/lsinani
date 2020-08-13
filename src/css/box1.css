@@ -1,0 +1,86 @@
+.content {
+  position: relative;
+  max-width: 100%;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.aboutMeBox1 {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+  color: black;
+}
+.content:hover {
+  transform: scale(0.9);
+}
+.content::before,
+.content::after {
+  content: "";
+  z-index: 1;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0rem;
+  box-shadow: 0.2px 2px 8px 3px white;
+  background: rgba(255, 255, 255, 0.2);
+  margin-top: 0.5rem;
+}
+
+.content::before {
+  left: 0;
+  border-bottom: 3px solid white;
+  border-left: 3px solid white;
+  animation: leftLine 1s ease 0.2s forwards, bottomLine 1s ease 1.2s forwards;
+}
+
+@keyframes leftLine {
+  0% {
+  }
+  100% {
+    height: 5rem;
+  }
+}
+@keyframes bottomLine {
+  0% {
+  }
+  100% {
+    width: 99%;
+  }
+}
+.content::after {
+  right: 0;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+  animation: rightLine 1s ease 0.2s forwards, topLine 1s ease 1.2s forwards;
+}
+@keyframes rightLine {
+  0% {
+  }
+  100% {
+    height: 5rem;
+  }
+}
+@keyframes topLine {
+  0% {
+  }
+  100% {
+    width: 99%;
+  }
+}
+
+.contentFade {
+  opacity: 1;
+  animation: contentFade 2s forwards;
+}
+@keyframes contentFade {
+  50% {
+    opacity: 0.5;
+    transform: scale(0.1);
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}

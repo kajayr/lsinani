@@ -1,0 +1,160 @@
+.openProject {
+  display: grid;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  justify-self: center;
+  align-self: center;
+  background-color: rgba(242, 242, 255, 0.432);
+  max-width: 80%;
+  border-radius: 10px;
+  z-index: 4;
+  animation: Project 2s forwards;
+}
+
+@keyframes Project {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.closeProject {
+  display: grid;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  justify-self: center;
+  align-self: center;
+  opacity: 1;
+  background-color: rgba(242, 242, 255, 0.432);
+  max-width: 80%;
+  border-radius: 10px;
+  animation: close2 2s forwards;
+}
+@keyframes close2 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0);
+    display: none;
+  }
+}
+
+.projectPageDetails {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr;
+  grid-template-rows: auto;
+  column-gap: 10px;
+  row-gap: 15px;
+  grid-template-areas:
+    "Header Header Header"
+    "MSpic MSText MSText"
+    "Sinanicopic SinanicoText SinanicoText";
+}
+
+p {
+  font-family: "Lato", sans-serif;
+}
+
+.projectHeader {
+  grid-area: Header;
+  justify-self: center;
+  align-self: top;
+  padding-bottom: 0.5rem;
+  color: white;
+  text-shadow: 2px 2px 8px black;
+  font-family: "Merienda One", cursive;
+  font-size: 2rem;
+}
+.projectMSText {
+  grid-area: MSText;
+  font-size: 1rem;
+  padding: 0.5rem 0.5rem;
+  text-align: justify;
+  text-justify: inter-word;
+  width: 80%;
+}
+
+.msProjectPic {
+  grid-area: MSpic;
+  width: 15rem;
+  height: 10rem;
+  padding: 10px;
+}
+.msProjectPic:hover {
+  animation: clickme 0.8s;
+}
+@keyframes clickme {
+  20% {
+    transform: translateY(-15px);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.projectSinaniCoText {
+  grid-area: SinanicoText;
+  font-size: 1rem;
+  padding: 0.5rem 0.5rem;
+  text-align: justify;
+  text-justify: inter-word;
+  width: 80%;
+}
+
+.sinanicoProjectPic {
+  grid-area: Sinanicopic;
+  width: 15rem;
+  height: 10rem;
+  padding: 10px;
+}
+
+.sinanicoProjectPic:hover {
+  animation: clickme 0.8s;
+}
+
+@media all and (max-width: 500px) {
+  .openProject {
+    grid-column: 1;
+    grid-row: 2 / span 3;
+    max-width: 96%;
+  }
+
+  .projectHeader {
+    align-self: center;
+    padding-bottom: 0.1rem;
+    font-size: 2rem;
+  }
+  .closeProject {
+    grid-column: 1;
+    grid-row: 2 / span 3;
+    max-width: 96%;
+  }
+
+  .projectPageDetails {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr;
+    column-gap: 1px;
+    row-gap: 1px;
+    grid-template-areas:
+      "Header"
+      "MSpic"
+      "Sinanicopic";
+  }
+  .projectSinaniCoText {
+    display: none;
+  }
+  .projectMSText {
+    display: none;
+  }
+}
