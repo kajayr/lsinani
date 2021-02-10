@@ -29,8 +29,7 @@ const Projects = (props) => {
           <br></br>Purpose: Creating an Ad reporter for the team to add the
           important keys, save time, and save needed data to build a form.
           <br></br>
-          Responsive for big screens and all laptops. This appslication is not
-          designed for smartphone usage.
+          This application is not designed for small screens.
         </p>
         <a
           href="http://www.sinanico.com/"
@@ -47,9 +46,7 @@ const Projects = (props) => {
         <p className="projectSinaniCoText">
           Technologies used: HTML, CSS, JavaScript <br></br>
           <br></br>Purpose: Creating a website which only represents the
-          products and its details.
-          <br></br>
-          Responsive for all devices.
+          products and its details. The project is not complete yet. 
         </p>
       </div>
     </div>
