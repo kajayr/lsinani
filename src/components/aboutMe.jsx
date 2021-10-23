@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWindowClose } from "@fortawesome/free-solid-svg-icons";
 import "../css/aboutMe.css";
 import "../css/box1.css";
-
+//About me
 const AboutMe = (props) => {
   return (
     <div className={props.aboutPage}>
